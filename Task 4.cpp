@@ -16,7 +16,7 @@ int main()
     int n;
     Person p;
 
-    // Step 1: Save persons in file
+    
     cout << "Enter number of persons: ";
     cin >> n;
 
@@ -40,7 +40,7 @@ int main()
 
     out.close();
 
-    // Step 2: Read persons into vector
+    
     ifstream in("persons.txt");
 
     vector<Person> people;
@@ -63,7 +63,7 @@ int main()
         return 0;
     }
 
-    // Find younger and older ages
+    
     int minAge = people[0].age;
     int maxAge = people[0].age;
 
@@ -76,7 +76,7 @@ int main()
             maxAge = people[i].age;
     }
 
-    // Save results in file
+    
     ofstream result("results.txt");
 
     result << "Younger persons:\n";
